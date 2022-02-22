@@ -30,7 +30,7 @@ export default function Login(){
            let navigate =  useNavigate();
            navigate('/profile')
        }, error=>{
-           const resMessage = (error.reponse && error.response.data && error.response.message || error.message || error.toString());
+           const resMessage = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
            setLoading(false);
            setMessage(resMessage);
        })
