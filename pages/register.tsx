@@ -64,7 +64,7 @@ export default function Register(){
             <Form>
               {!successful && (
                 <div>
-                  <div className="form-group col-2">
+                  <div className="form-group">
                     <label htmlFor="username"> Username </label>
                     <Field name="username" type="text" className="form-control" />
                     <ErrorMessage
@@ -73,7 +73,7 @@ export default function Register(){
                       className="alert alert-danger"
                     />
                   </div>
-                  <div className="form-group col-2">
+                  <div className="form-group">
                     <label htmlFor="email"> Email </label>
                     <Field name="email" type="email" className="form-control" />
                     <ErrorMessage
@@ -82,7 +82,7 @@ export default function Register(){
                       className="alert alert-danger"
                     />
                   </div>
-                  <div className="form-group col-2">
+                  <div className="form-group">
                     <label htmlFor="password"> Password </label>
                     <Field
                       name="password"

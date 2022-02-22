@@ -57,7 +57,7 @@ export default function Login(){
             onSubmit={handleLogin}
           >
             <Form>
-              <div className="form-group col-2">
+              <div className="form-group">
                 <label htmlFor="username">Username</label>
                 <Field name="username" type="text" className="form-control" />
                 <ErrorMessage
@@ -66,7 +66,7 @@ export default function Login(){
                   className="alert alert-danger"
                 />
               </div>
-              <div className="form-group col-2">
+              <div className="form-group">
                 <label htmlFor="password">Password</label>
                 <Field name="password" type="password" className="form-control" />
                 <ErrorMessage
@@ -75,7 +75,7 @@ export default function Login(){
                   className="alert alert-danger"
                 />
               </div>
-              <div className="form-group col-4">
+              <div className="form-group">
                 <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
                   {loading && (
                     <span className="spinner-border spinner-border-sm"></span>
