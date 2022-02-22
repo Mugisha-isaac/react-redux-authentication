@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import authService from "../services/auth.service";
 import { RouterProps } from "../interface/IrouterProps";
 import React, {useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.css'
 
 
 export default function Login(){
@@ -41,12 +42,14 @@ export default function Login(){
     };
 
     return(
-        <div className="col-md-12">
+        <div className="col-md-12 margin auto ">
         <div className="card card-container">
           <img
             src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
             alt="profile-img"
             className="profile-img-card"
+            width={100}
+            height={100}
           />
           <Formik
             initialValues={initialValues}
@@ -54,7 +57,7 @@ export default function Login(){
             onSubmit={handleLogin}
           >
             <Form>
-              <div className="form-group">
+              <div className="form-group col-2">
                 <label htmlFor="username">Username</label>
                 <Field name="username" type="text" className="form-control" />
                 <ErrorMessage
@@ -63,7 +66,7 @@ export default function Login(){
                   className="alert alert-danger"
                 />
               </div>
-              <div className="form-group">
+              <div className="form-group col-2">
                 <label htmlFor="password">Password</label>
                 <Field name="password" type="password" className="form-control" />
                 <ErrorMessage
@@ -72,7 +75,7 @@ export default function Login(){
                   className="alert alert-danger"
                 />
               </div>
-              <div className="form-group">
+              <div className="form-group col-4">
                 <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
                   {loading && (
                     <span className="spinner-border spinner-border-sm"></span>
