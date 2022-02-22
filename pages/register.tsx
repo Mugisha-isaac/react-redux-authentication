@@ -34,9 +34,7 @@ export default function Register(){
         }, 
         
         error =>{
-            const resMessage = (error.reponse && error.response.data && error.response.data.message
-             || error.message || error.toString()      
-          )
+            const resMessage = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
           setSuccessful(false);
           setMessage(resMessage);
         }
